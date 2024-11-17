@@ -2,6 +2,7 @@ package net.khraos.learningforge;
 
 import net.khraos.learningforge.block.ModBlocks;
 import net.khraos.learningforge.creativeTab.ModTabs;
+import net.khraos.learningforge.block.ModBlockItems;
 import net.khraos.learningforge.item.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 
@@ -14,7 +15,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 public class ModClassRegistrar {
     public static void main(IEventBus eventBus) {
         ModItems.register(eventBus);
+
         ModTabs.register(eventBus);
+
         ModBlocks.register(eventBus);
+        ModBlockItems.register(eventBus);
     }
 }

@@ -1,4 +1,4 @@
-package net.khraos.learningforge.item;
+package net.khraos.learningforge.block;
 
 import net.khraos.learningforge.LearningForge;
 import net.minecraft.world.item.Item;

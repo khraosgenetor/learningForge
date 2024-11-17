@@ -1,7 +1,6 @@
 package net.khraos.learningforge.block;
 
 import net.khraos.learningforge.LearningForge;
-import net.khraos.learningforge.item.ModBlockItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -29,13 +28,13 @@ public class ModBlocks {
                     new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK))
             );
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+    public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = FORGE_UTILS_BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    public static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
         return ModBlockItems.FORGE_UTILS_BLOCK_ITEMS.register(
                 name, () -> new BlockItem(block.get(), new Item.Properties())
         );
