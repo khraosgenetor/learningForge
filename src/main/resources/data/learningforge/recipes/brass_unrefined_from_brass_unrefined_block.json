@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "learningforge:brass_unrefined_block"
+    }
+  ],
+  "result": {
+
+    "id": "learningforge:brass_unrefined",
+    "count": 9
+  }
+}

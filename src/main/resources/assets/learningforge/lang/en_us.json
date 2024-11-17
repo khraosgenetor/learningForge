@@ -1,7 +1,9 @@
 {
   "item.learningforge.brass_ingot": "Brass Ingot",
+  "item.learningforge.brass_unrefined": "Unrefined Brass",
 
   "block.learningforge.brass_block": "Block of Brass",
+  "block.learningforge.brass_unrefined_block": "Block of Unrefined Brass",
 
   "forge_utils.forgetabs": "Forge Utilities"
 }

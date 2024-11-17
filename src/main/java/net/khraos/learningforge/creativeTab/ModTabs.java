@@ -2,6 +2,7 @@ package net.khraos.learningforge.creativeTab;
 
 import net.khraos.learningforge.LearningForge;
 import net.khraos.learningforge.block.ModBlocks;
+import net.khraos.learningforge.item.Forge_Utils;
 import net.khraos.learningforge.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -26,7 +27,7 @@ public class ModTabs {
     public static final RegistryObject<CreativeModeTab> FORGE_UTILS = MOD_TABS.register(
             "forge_utils", () -> CreativeModeTab.builder()
                     .icon(
-                            () -> new ItemStack(ModItems.BRASS_INGOT.get())
+                            () -> new ItemStack(Forge_Utils.BRASS_INGOT.get())
                     )
                     .title(Component.translatable("forge_utils.forgetabs"))
                     .displayItems((itemDisplayParameters, output) -> {

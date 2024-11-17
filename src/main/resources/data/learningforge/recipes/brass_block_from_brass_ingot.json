@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "learningforge:brass_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "learningforge:brass_block"
+  }
+}
