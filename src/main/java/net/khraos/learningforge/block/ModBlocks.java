@@ -16,7 +16,11 @@ public class ModBlocks {
     public static final DeferredRegister<Block> FORGE_UTILS_BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, LearningForge.MOD_ID);
 
+    public static final DeferredRegister<Block> FORGE_ORES_BLOCKS =
+            DeferredRegister.create(ForgeRegistries.BLOCKS, LearningForge.MOD_ID);
+
     public static void register(IEventBus eventBus) {
         Forge_Utils.register(eventBus);
+        Forge_Ores.register(eventBus);
     }
 }

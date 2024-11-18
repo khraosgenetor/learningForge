@@ -5,5 +5,11 @@
   "block.learningforge.brass_block": "Block of Brass",
   "block.learningforge.brass_unrefined_block": "Block of Unrefined Brass",
 
-  "forge_utils.forgetabs": "Forge Utilities"
+  "block.learningforge.brass_ore": "Brass Ore",
+  "block.learningforge.deepslate_brass_ore": "Deepslate Brass Ore",
+  "block.learningforge.nether_brass_ore": "Hellish Brass Ore",
+  "block.learningforge.end_stone_brass_ore": "Ethereal Brass Ore",
+
+  "forge_utils.forgetabs": "Forge Utilities",
+  "forge_ores.forgetabs": "Forge Ores"
 }

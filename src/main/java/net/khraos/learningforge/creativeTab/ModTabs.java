@@ -2,7 +2,6 @@ package net.khraos.learningforge.creativeTab;
 
 import net.khraos.learningforge.LearningForge;
 import net.khraos.learningforge.block.ModBlocks;
-import net.khraos.learningforge.item.Forge_Utils;
 import net.khraos.learningforge.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -24,10 +23,24 @@ public class ModTabs {
     public static final DeferredRegister<CreativeModeTab> MOD_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, LearningForge.MOD_ID);
 
+    public static final RegistryObject<CreativeModeTab> FORGE_ORES = MOD_TABS.register(
+            "forge_ores", () -> CreativeModeTab.builder()
+                    .icon(
+                            () -> new ItemStack(net.khraos.learningforge.block.Forge_Ores.BRASS_ORE.get())
+                    )
+                    .title(Component.translatable("forge_ores.forgetabs"))
+                    .displayItems((pParameters, pOutput) -> {
+                        for (RegistryObject<Block> block : ModBlocks.FORGE_ORES_BLOCKS.getEntries()) {
+                            pOutput.accept(block.get());
+                        }
+                    })
+                    .build()
+    );
+
     public static final RegistryObject<CreativeModeTab> FORGE_UTILS = MOD_TABS.register(
             "forge_utils", () -> CreativeModeTab.builder()
                     .icon(
-                            () -> new ItemStack(Forge_Utils.BRASS_INGOT.get())
+                            () -> new ItemStack(net.khraos.learningforge.item.Forge_Utils.BRASS_INGOT.get())
                     )
                     .title(Component.translatable("forge_utils.forgetabs"))
                     .displayItems((itemDisplayParameters, output) -> {
