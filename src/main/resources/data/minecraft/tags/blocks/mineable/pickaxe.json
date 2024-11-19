@@ -1,0 +1,11 @@
+{
+  "values": [
+    "learningforge:brass_ore",
+    "learningforge:end_stone_brass_ore",
+    "learningforge:deepslate_brass_ore",
+    "learningforge:nether_brass_ore",
+
+    "learningforge:brass_block",
+    "learningforge:brass_unrefined_block"
+  ]
+}

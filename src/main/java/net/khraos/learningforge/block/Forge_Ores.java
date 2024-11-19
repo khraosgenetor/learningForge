@@ -1,9 +1,11 @@
 package net.khraos.learningforge.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,23 +24,37 @@ public class Forge_Ores {
 
     public static final RegistryObject<Block> BRASS_ORE =
             registerFOBlock("brass_ore", () ->
-                    new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE))
-            );
+                    new DropExperienceBlock(
+                            UniformInt.of(3, 6),
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)
+                                    .strength(2f).requiresCorrectToolForDrops()
+
+
+                    ));
 
     public static final RegistryObject<Block> DEEPSLATE_BRASS_ORE =
             registerFOBlock("deepslate_brass_ore", () ->
-                    new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE))
-            );
+                    new DropExperienceBlock(
+                            UniformInt.of(3, 6),
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)
+                                    .strength(3f).requiresCorrectToolForDrops()
+                    ));
 
     public static final RegistryObject<Block> NETHER_BRASS_ORE =
             registerFOBlock("nether_brass_ore", () ->
-                    new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE))
-            );
+                    new DropExperienceBlock(
+                            UniformInt.of(3, 6),
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_GOLD_ORE)
+                                    .strength(2f).requiresCorrectToolForDrops()
+                    ));
 
     public static final RegistryObject<Block> END_STONE_BRASS_ORE =
             registerFOBlock("end_stone_brass_ore", () ->
-                    new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE))
-            );
+                    new DropExperienceBlock(
+                            UniformInt.of(3, 6),
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)
+                                    .strength(3f).requiresCorrectToolForDrops()
+                    ));
 
 
     public static <T extends Block> RegistryObject<T> registerFOBlock(String name, Supplier<T> block) {
